@@ -1,0 +1,87 @@
+Linux System Utilities - top, ps, and more
+
+
+mati@mati-laptop:~$ ps
+  PID TTY          TIME CMD
+ 4221 pts/0    00:00:00 bash
+ 4240 pts/0    00:00:00 ps
+
+mati@mati-laptop:~$ tty
+/dev/pts/0
+
+
+mati@mati-laptop:~$ ps aux | less
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.1  0.0  23824  2104 ?        Ss   20:28   0:01 /sbin/init
+root         2  0.0  0.0      0     0 ?        S    20:28   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S    20:28   0:00 [migration/0]
+root         4  0.0  0.0      0     0 ?        S    20:28   0:00 [ksoftirqd/0]
+root         5  0.0  0.0      0     0 ?        S    20:28   0:00 [watchdog/0]
+root         6  0.0  0.0      0     0 ?        S    20:28   0:00 [migration/1]
+root         7  0.0  0.0      0     0 ?        S    20:28   0:00 [ksoftirqd/1]
+root         8  0.0  0.0      0     0 ?        S    20:28   0:00 [watchdog/1]
+root         9  0.0  0.0      0     0 ?        S    20:28   0:00 [migration/2]
+root        10  0.0  0.0      0     0 ?        S    20:28   0:00 [ksoftirqd/2]
+
+
+mati@mati-laptop:~$ top
+top - 20:39:29 up 11 min,  2 users,  load average: 1.18, 1.11, 0.66
+Tasks: 227 total,   1 running, 226 sleeping,   0 stopped,   0 zombie
+Cpu(s):  6.0%us,  2.3%sy,  0.0%ni, 91.6%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:   3853172k total,  1932652k used,  1920520k free,   165668k buffers
+Swap:   479224k total,        0k used,   479224k free,   669560k cached
+
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                 
+ 3628 mati      20   0  684m 141m  29m S   14  3.8   1:20.61 plugin-containe         
+ 1659 root      20   0  173m  31m  14m S    6  0.8   0:55.55 Xorg                    
+ 2842 mati       9 -11  280m 6052 4504 S    2  0.2   0:06.95 pulseaudio              
+ 3256 mati      20   0  255m  14m  11m S    2  0.4   0:07.65 psensor                 
+
+
+Three different time spans (1, 5, and 15 minutes) . The most important thing to understand is that they do not represent CPU usage. Rather they represent the load on the CPU by processes waiting for their chance to use the CPU.
+ 
+Multi-processor system, the load is relative to the number of processor cores available. The "100% utilization" mark is 1.00 on a single-core system, 2.00, on a dual-core, 4.00 on a quad-core, etc.
+
+http://blog.scoutapp.com/articles/2009/07/31/understanding-load-averages
+
+
+mati@mati-laptop:~$ uptime
+ 21:02:24 up 34 min,  2 users,  load average: 1.02, 0.81, 0.69
+
+
+mati@mati-laptop:~$ free -m   Megabyte [symbol MB, sometimes abbreviated as Mbyte]
+             total       used       free     shared    buffers     cached
+Mem:          3762       2291       1471          0        236        806
+-/+ buffers/cache:       1249       2513
+Swap:          467          0        467
+
+
+mati@mati-laptop:~$ free      kilobyte for 1000 bytes (symbol: kB) or Kilobyte (kibibyte) for 1024 bytes
+             total       used       free     shared    buffers     cached
+Mem:       3853172    2322752    1530420          0     241944     828748
+-/+ buffers/cache:    1252060    2601112
+Swap:       479224          0     479224
+
+
+mati@mati-laptop:~$ df -h  Report file system disk space usage 
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/sda1             437G   48G  367G  12% /
+none                  1.9G  340K  1.9G   1% /dev
+none                  1.9G  732K  1.9G   1% /dev/shm
+none                  1.9G  228K  1.9G   1% /var/run
+none                  1.9G     0  1.9G   0% /var/lock
+none                  1.9G     0  1.9G   0% /lib/init/rw
+
+
+mati@mati-laptop:~$ vmstat  Report virtual memory statistics
+procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa
+ 4  0      0 1471456 242028 833616    0    0    72    42  205 1417  6  2 90  2
+
+
+http://www.youtube.com/watch?v=hOVYSdi_fgw
+
+
+ 
+
+

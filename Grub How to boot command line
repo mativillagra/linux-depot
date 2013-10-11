@@ -1,0 +1,14 @@
+sudo nano /etc/default/grub
+
+Find out this line:
+
+GRUB_CMDLINE_LINUX_DEFAULT=”quiet splash”
+
+Change it to:
+
+GRUB_CMDLINE_LINUX_DEFAULT=”text”
+
+Update Grub:
+
+sudo update-grub
+

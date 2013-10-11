@@ -1,0 +1,6 @@
+
+
+pidstat -r -t -p  16267 30
+
+http://linuxpoison.blogspot.com.ar/2010/03/how-to-monitor-process-on-linux-using.html
+

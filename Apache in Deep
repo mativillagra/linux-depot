@@ -94,3 +94,37 @@ AllowOverride tiene que ver algo con .htaccess
 </VirtualHost>
 
 
+############################################################################################################################
+
+
+sudo apache2 -M Dump a list of loaded Static and Shared Modules.
+
+El mod_rewrite es un módulo de Apache que permite modificar lo que aparece en la barra de dirección, supongamos que tenemos lo siguiente: index.php?mod=index&taskid=9, podría quedar: /task/9. La verdad nunca lo he usado a pie, pero se necesita tener activado este módulo para poder utilizar diversas aplicaciones y frameworks (como CakePHP). Veamos como activarlo en Ubuntu 7.10.
+
+Como siempre en Ubuntu todo es más fácil, esta distribución se la recomiendo a todos aquellos que quieran empezar a familiarizarse con GNU/Linux. Entonces tecleamos lo siguiente en la línea de comandos:
+
+$ sudo a2enmod rewrite
+
+El comando a2enmod (podría ser una abreviatura de Apache2 Enable Module) sirve para activar módulos que se encuentren en el directorio /etc/apache2/mods-available y los pasa al directorio /etc/apache2/mods-enabled.
+
+
+http://sonidolibre.wordpress.com/2008/04/18/activar-mod_rewrite-de-apache2-en-ubuntu/
+
+a2enmod ---- > Which module(s) do you want to enable (wildcards ok)?
+
+
+Then, milinux.no-ip.org
+
+I add this line
+
+
+
+###############################################################################################################
+
+
+To to list the compiled-in modules for your Apache installation, use the following command
+
+$ apache2 -l
+
+
+

@@ -1,0 +1,62 @@
+A local area network (LAN) is a computer network that interconnects computers in a limited area such as a home, school, computer laboratory, or office building using network media.[1] The defining characteristics of LANs, in contrast to wide area networks (WANs), include their usually higher data-transfer rates, smaller geographic area, and lack of a need for leased telecommunication lines.
+
+ARCNET, Token Ring and other technology standards have been used in the past, but Ethernet over twisted pair cabling, and Wi-Fi are the two most common technologies currently used to build LANs.
+
+-------------------------------------------------------------------------------------
+
+The Internet Protocol (IP) is the principal communications protocol in the Internet protocol suite for relaying datagrams across network boundaries. Its routing function enables internetworking, and essentially establishes the Internet.
+
+IP, as the primary protocol in the Internet layer of the Internet protocol suite, has the task of delivering packets from the source host to the destination host solely based on the IP addresses. For this purpose, IP defines datagram structures that encapsulate the data to be delivered. It also defines addressing methods that are used to label the datagram with source and destination information.
+
+Historically, IP was the connectionless datagram service in the original Transmission Control Program introduced by Vint Cerf and Bob Kahn in 1974; the other being the connection-oriented Transmission Control Protocol (TCP). The Internet protocol suite is therefore often referred to as TCP/IP.
+
+The first major version of IP, Internet Protocol Version 4 (IPv4), is the dominant protocol of the internet. Its successor is Internet Protocol Version 6 (IPv6).
+
+-------------------------------------------------------------------------------------
+
+An Internet Protocol address (IP address) is a numerical label assigned to each device (e.g., computer, printer) participating in a computer network that uses the Internet Protocol for communication.[1] An IP address serves two principal functions: host or network interface identification and location addressing. Its role has been characterized as follows: 
+
+
+"A name indicates what we seek. An address indicates where it is. A route indicates how to get there."
+
+The designers of the Internet Protocol defined an IP address as a 32-bit number[1] and this system, known as Internet Protocol Version 4 (IPv4), is still in use today. 
+
+--------------------------------------------------------------------------------------
+
+---- Fundamentals ----- 
+
+
+* Dada una direccion IP 172.16.0.1 / 16   
+
+Address:   172.16.0.1            10101100.00010000 .00000000.00000001
+Netmask:   255.255.0.0 = 16      11111111.11111111 .00000000.00000000
+Wildcard:  0.0.255.255           00000000.00000000 .11111111.11111111
+
+=>
+
+Network:   172.16.0.0/16         10101100.00010000 .00000000.00000000 (Class B)
+Broadcast: 172.16.255.255        10101100.00010000 .11111111.11111111
+HostMin:   172.16.0.1            10101100.00010000 .00000000.00000001
+HostMax:   172.16.255.254        10101100.00010000 .11111111.11111110
+Hosts/Net: 65534                 (Private Internet)
+
+----------------------------------------------------------------------------------------
+
+Virtual LAN
+
+In computer networking, a single layer-2 network may be partitioned to create multiple distinct broadcast domains, which are mutually isolated so that packets can only pass between them via one or more routers; such a domain is referred to as a Virtual Local Area Network, Virtual LAN or VLAN.
+
+Computadoras conectadas de forma fisica a mismo switch pero de forma logica a diferentes vlans. 
+
+http://www.youtube.com/watch?v=CVt-1U63f_g&list=FLYoxuL9PjW0w0Uc7kANI_Ng&index=22
+
+
+1. Asignar diferentes VLAN a diferentes puertos del switch * VLAN de nivel 1 (por puerto)
+
+?????? 2. VLAN de nivel 3 por direcciones de subred (subred virtual). La cabecera de nivel 3 se utiliza para mapear la VLAN a la que pertenece. En este tipo de VLAN son los paquetes, y no las estaciones, quienes pertenecen a la VLAN. Estaciones con múltiples protocolos de red (nivel 3) estarán en múltiples VLANs.
+
+-------------------------------------------------------------------------------------------
+
+DMZ 
+
+In computer security, a DMZ (sometimes referred to as a perimeter network) is a physical or logical subnetwork that contains and exposes an organization's external-facing services to a larger untrusted network, usually the Internet. The purpose of a DMZ is to add an additional layer of security to an organization's local area network (LAN); an external attacker only has access to equipment in the DMZ, rather than any other part of the network.

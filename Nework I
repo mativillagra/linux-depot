@@ -1,0 +1,49 @@
+* 
+
+* una VLAN forma un unico dominio de broadcast donde todos los hosts conectados a ella pueden conectarse entre sí. 
+
+* In computer security, a DMZ (sometimes referred to as a perimeter network) is a physical or logical subnetwork that contains and exposes an organization's external-facing services to a larger untrusted network, usually the Internet. 
+
+* Subredes : A subnetwork, or subnet, is a logically visible subdivision of an IP network.[1] The practice of dividing a network into two or more networks is called subnetting.
+
+*  An IPv4 address consists of 32 bits, for human readability written in a form consisting of four decimal octets separated by full stops (dots), called dot-decimal notation.
+
+* An IP address is divided into two logical parts, the network prefix and the host identifier or rest field. All hosts on a subnetwork have the same network prefix.
+
+                           Binary Form                  Dot-decimal notation 
+IP address 	11000000.10101000.00000101.10000010 	   192.168.5.130
+------------------------------------------------------------------------------
+Subnet mask 	11111111.11111111.11111111.00000000 	   255.255.255.0      (Class C)
+------------------------------------------------------------------------------
+Network prefix 	11000000.10101000.00000101.00000000 	   192.168.5.0
+------------------------------------------------------------------------------
+Host part 	00000000.00000000.00000000.10000010 	   0.0.0.130
+-------------------------------------------------------------------------------
+Broadcast                                                 192.168.5.255  
+
+
+Subnetting
+
+Subnetting is the process of designating some high-order bits from the host part and grouping them with the network mask to form the subnet mask. This divides a network into smaller subnets. 
+
+
+Netmask Bits
+--------------
+
+255.0.0.0 / 8
+
+255.255.0.0 / 16
+
+255.255.255.0 / 24 → For example, 255.255.255.0 is the network mask for the 192.168.1.0/24 prefix.
+
+255.255.255.128 / 25
+
+255.255.255.192 / 26
+
+255.255.255.224 / 27
+
+255.255.255.240 / 28
+
+255.255.255.248 / 29
+
+255.255.255.252 / 30

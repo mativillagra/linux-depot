@@ -1,0 +1,7 @@
+* How to dump packets that arrived and sent through a certain network interface. -i command line argument does exactly this.
+* Turning off name resolution -n 
+* Network interface -i 
+
+tcpdump -ni eth1 not port 443
+
+http://www.alexonlinux.com/tcpdump-for-dummies

@@ -1,0 +1,32 @@
+Cordoba:
+VPN Connectria Gw2 Static 208.74.48.120    ----    190.123.122.66
+
+
+SP y NP
+VPN-Connectria-GW Static 208.74.48.120    ----     190.216.51.2
+
+
+Resistencia
+VPN-Connectria-GW Static 208.74.48.120    ----     200.43.224.146
+
+
+
+root@gateway:~# ping 208.74.48.120  [Firewall Connectria]
+
+PING 208.74.48.120 (208.74.48.120) 56(84) bytes of data.
+64 bytes from 208.74.48.120: icmp_req=1 ttl=241 time=206 ms
+64 bytes from 208.74.48.120: icmp_req=2 ttl=241 time=206 ms
+64 bytes from 208.74.48.120: icmp_req=3 ttl=241 time=206 ms
+
+
+Cordoba:
+172.26.97.254/24 	DMZ-Connectria
+
+Sp y NP
+172.31.114.254/24 	DMZ-Connectria
+
+Resistencia
+172.18.225.254/24 	DMZ-Connectria
+
+
+vlan / dmz 

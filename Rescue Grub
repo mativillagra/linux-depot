@@ -1,0 +1,21 @@
+Boot with Live CD
+
+
+Open a terminal ......
+
+
+1. sudo mkdir /mnt/myroot
+
+2. sudo mount /dev/[partition with /boot i.e. sda1] → /mnt/myroot
+
+3. sudo mount --bind /dev  /mnt/myroot/dev
+
+4. sudo mount --bind /sys  /mnt/myroot/sys
+
+5. sudo mount --bind /proc  /mnt/myroot/proc
+
+6. sudo chroot /mnt/myroot → will change prompt
+
+7. sudo grub-install /dev/[partition i.e. sda not sda1]
+
+8. reboot 

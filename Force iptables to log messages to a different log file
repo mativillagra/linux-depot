@@ -1,0 +1,13 @@
+Force iptables to log messages to a different log file
+
+File Ubuntu / Debian /etc/rsyslog.conf 
+
+
+#http://www.cyberciti.biz/tips/force-iptables-to-log-messages-to-a-different-log-file.html
+kern.warning     /var/log/iptables.log
+
+
+Rule 
+
+IPTABLES -A INPUT -i eth0 -j LOG  --log-level 4 --log-prefix IPtables-Dropped:
+

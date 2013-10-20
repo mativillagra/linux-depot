@@ -1,0 +1,12 @@
+Runing Vitualbox Remotely
+
+http://www.virtualbox.org/manual/ch08.html
+
+sudo -H -u server2 VBoxManage startvm "Centos_bacula" --type headless
+
+
+The extra --type option causes VirtualBox to use VBoxHeadless as the front-end to the internal virtualization engine instead of the Qt front-end. 
+
+http://www.virtualbox.org/manual/ch07.html#vboxheadless
+
+I add also sudo usermod -a -G vboxusers server2

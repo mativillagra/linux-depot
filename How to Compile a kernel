@@ -50,6 +50,7 @@ Kernel Tools: sudo apt-get install build-essential kernel-package libncurses5-de
 6. Once you save your .config file Exit the menu. 
 
 
+
 7. Compile you never want to compile your kernel as root, so you use fakeroot 
 
 
@@ -67,5 +68,6 @@ Kernel Tools: sudo apt-get install build-essential kernel-package libncurses5-de
    make[2]: Leaving directory `/home/mati/kernel/linux-3.11.6'
    make[1]: Leaving directory `/home/mati/kernel/linux-3.11.6'
 
-   mati@laptop:~/kernel/linux$ ls
+
+8. To install the linux-kernels sudo dpkg -i *.deb
 

@@ -1,6 +1,9 @@
 How to Compile a kernel -- Using a previous config file. 
 
 
+Kernel Tools: sudo apt-get install build-essential kernel-package libncurses5-dev bzip2 fakeroot
+
+
 1'. Copy your config file from boot to kernel/ dir 
  
     cd /boot/ && cp config-3.2.0-23-generic  ~/kernel/
@@ -44,4 +47,14 @@ How to Compile a kernel -- Using a previous config file.
     make menuconfig 
 
 
-To be continue ...... 
+6. Once you save your .config file Exit the menu. 
+
+
+7. Compile you never want to compile your kernel as root, so you use fakeroot 
+
+
+    fakeroot make-kpkg -j5 --initrd --append-to-version=-custom-os-elementary kernel_image kernel_headers
+    
+    
+    Time 18:37 start time
+

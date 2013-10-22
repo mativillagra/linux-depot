@@ -58,3 +58,14 @@ Kernel Tools: sudo apt-get install build-essential kernel-package libncurses5-de
     
     Time 18:37 start time
 
+     
+   chown -R root:root                  /home/mati/kernel/linux/debian/linux-headers-3.11.6-custom-os-elementary
+   chmod -R og=rX                      /home/mati/kernel/linux/debian/linux-headers-3.11.6-custom-os-elementary
+   dpkg --build                        /home/mati/kernel/linux/debian/linux-headers-3.11.6-custom-os-elementary ..
+   dpkg-deb: building package `linux-headers-3.11.6-custom-os-elementary' in `../linux-headers-3.11.6-custom-os-elementary_3.11.6-custom-os-elementary-10.00.Custom_amd64.deb'.
+   cp -pf debian/control.dist          debian/control
+   make[2]: Leaving directory `/home/mati/kernel/linux-3.11.6'
+   make[1]: Leaving directory `/home/mati/kernel/linux-3.11.6'
+
+   mati@laptop:~/kernel/linux$ ls
+

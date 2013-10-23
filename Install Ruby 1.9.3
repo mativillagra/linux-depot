@@ -1,4 +1,3 @@
-
 1. Install RVM  
  
    curl -L https://get.rvm.io | bash -s stable
@@ -19,11 +18,8 @@
 
 
 
-2. Add source /home/developer/.rvm/scripts/rvm to   ~ /.bashrc 
+2. Add 'source /home/developer/.rvm/scripts/rvm' to   ~ /.bashrc & reload .bashrc file-  
 
-
-   source /home/developer/.rvm/scripts/rvm
- 
    Installation add this line to .bashrc 
 
    PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
@@ -44,7 +40,9 @@
 
 4. Define Gem Dependencies
 
-  Since we’re using veewee and Vagrant, we need to install those Gems for our project to work. The best way to do this is using a Gemfile which lists the version of each Gem we want to use. So create a Gemfile in your project’s directory with the following contents:
+  Since we’re using veewee and Vagrant, we need to install those Gems for our project to work. The best way to do this is using
+  a Gemfile which lists the version of each Gem we want to use. So create a Gemfile in your project’s directory with the following
+  contents:
   
   source :rubygems
   gem 'vagrant', '1.0.5'
@@ -60,10 +58,8 @@
   [developer@glb7239 veewee-centos63]$ gem --list
   
   
-5. You are ready to use veewee & vagrant! 
+5. You are ready to use veewee & vagrant! Create Base Box Definition 
 
-   Create Base Box Definition 
-   
    bundle exec veewee vbox templates 
    
    

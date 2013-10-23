@@ -98,3 +98,27 @@ Vagrant Cheatsheat
 
 
 http://earlyandoften.wordpress.com/2012/09/06/vagrant-cheatsheat/
+
+
+
+----------------------------------------------------------------------------------------------------------------------- 
+
+
+
+5'''. VirtualBox 4.3 Error [--sataportcount 1] when bundle exec veewee vbox build 'vmname' 
+
+   https://github.com/jedi4ever/veewee/issues/820
+   
+   https://github.com/jedi4ever/veewee/blob/master/lib/veewee/provider/virtualbox/box/helper/create.rb#L14
+   
+   Solution Edit File 
+   
+   vim ./.rvm/gems/ruby-1.9.3-p448/gems/veewee-0.3.7/lib/veewee/provider/virtualbox/box/helper/create.rb
+   
+   --sataportcount 1 too --portcount 1
+   
+   
+   
+
+
+

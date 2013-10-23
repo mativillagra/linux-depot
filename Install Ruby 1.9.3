@@ -1,0 +1,77 @@
+
+
+1. Install RVM  
+ 
+   curl -L https://get.rvm.io | bash -s stable
+
+  . 
+  .
+  .
+  .
+  .
+
+   # [user],
+ #
+ #   Thank you for using RVM!
+ #   I sincerely hope that RVM helps to make your life easier and
+ #   more enjoyable!!!
+ #
+ # ~Wayne
+
+
+
+2. Add source /home/developer/.rvm/scripts/rvm to   ~ /.bashrc 
+
+
+   source /home/developer/.rvm/scripts/rvm
+ 
+   Installation add this line to .bashrc 
+
+   PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+
+3. update RVM && install ruby 
+
+  rvm update
+  rvm reload
+
+  rvm install 1.9.3
+  rvm use 1.9.3 --default
+  
+  ------------------------------------------------------------------------------------------------------------
+  
+  sudo apt-get install libxml2-dev libxslt-dev
+
+
+4. Define Gem Dependencies
+
+  Since we’re using veewee and Vagrant, we need to install those Gems for our project to work. The best way to do this is using a Gemfile which lists the version of each Gem we want to use. So create a Gemfile in your project’s directory with the following contents:
+  
+  source :rubygems
+  gem 'vagrant', '1.0.5'
+  gem 'veewee', '0.3.7'
+
+  Then to install the gems simple run:
+
+  $ bundle
+  
+  Your bundle is complete!
+  Use `bundle show [gemname]` to see where a bundled gem is installed.
+  
+  [developer@glb7239 veewee-centos63]$ gem --list
+  
+  
+5. You are ready to use veewee & vagrant! 
+
+   Create Base Box Definition 
+   
+   bundle exec veewee vbox templates 
+   
+   
+----------------------------------------------------------------------------------------------------------------------
+
+5'. Follow 
+
+Automated VM Generation with veewee, Vagrant, Jenkins and Amazon S3 - Part 1
+
+http://spilth.org/blog/2013/01/21/automated-vm-generation-with-veewee-jenkins-and-amazon-s3/
